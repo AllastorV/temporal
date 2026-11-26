@@ -26,8 +26,10 @@ def refresh(resolve):
         return
     here = timeline.GetCurrentTimecode()
     fps = float(timeline.GetSetting("timelineFrameRate") or 24)
-    timeline.SetCurrentTimecode(shifted(here, fps, 1))
-    timeline.SetCurrentTimecode(here)
+    moved = shifted(here, fps, 1)
+    timeline.SetCurrentTimecode(moved)
+    if timeline.GetCurrentTimecode() == moved:
+        timeline.SetCurrentTimecode(here)
 
 
 def main():

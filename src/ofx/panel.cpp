@@ -499,6 +499,7 @@ private:
     std::wstring needName(const ParamSpec& c, double t, double old) const {
         std::wstring n = wide(c.label);
         if (c.type == PType::Choice && old != 0 && t >= 0 && t < c.options.size()) n += L": " + wide(c.options[static_cast<size_t>(t)]);
+        if (c.type == PType::Bool) n += t != 0 ? L" on" : L" off";
         return n;
     }
 
@@ -1173,13 +1174,15 @@ private:
         }
         const float x = r.left + 6 + 52 * clampf(static_cast<float>(value(*c.wa, 0)), 0, 1);
         const float y = r.bottom - 6 - 52 * clampf(static_cast<float>(value(*c.wa, 1)), 0, 1);
-        color(tone, 0.4f);
+        const bool on = enabled(*c.wa);
+        if (on) color(tone, 0.4f); else color(0x5a6167, 0.4f);
         rt->DrawEllipse(D2D1::Ellipse(D2D1::Point2F(x, y), 9, 9), brush.Get(), 1);
-        color(tone);
+        if (on) color(tone); else color(0x5a6167);
         rt->FillEllipse(D2D1::Ellipse(D2D1::Point2F(x, y), 4.5f, 4.5f), brush.Get());
     }
 
     void drawWheel(const Card& c) {
+        const bool on = enabled(*c.wa);
         const auto o = center(c);
         for (int i = 0; i < 36; ++i) {
             const float a0 = i * 10.f * 3.14159265f / 180, a1 = (i + 1) * 10.f * 3.14159265f / 180 + 0.01f;
@@ -1192,7 +1195,7 @@ private:
             sink->AddArc({D2D1::Point2F(o.x + 30 * std::cos(a1), o.y - 30 * std::sin(a1)), D2D1::SizeF(30, 30), 0, D2D1_SWEEP_DIRECTION_COUNTER_CLOCKWISE, D2D1_ARC_SIZE_SMALL});
             sink->EndFigure(D2D1_FIGURE_END_CLOSED);
             sink->Close();
-            color(hsl(i * 10.f + 5, 0.45f, 0.55f));
+            color(hsl(i * 10.f + 5, on ? 0.45f : 0.f, 0.55f));
             rt->FillGeometry(g.Get(), brush.Get());
         }
         ComPtr<ID2D1GradientStopCollection> stops;
@@ -1205,9 +1208,10 @@ private:
         toHsv(c, h, sat);
         const float a = h * 3.14159265f / 180, rr = 26 * sat;
         const D2D1_POINT_2F t = D2D1::Point2F(o.x + rr * std::cos(a), o.y - rr * std::sin(a));
-        brush->SetColor(D2D1::ColorF(static_cast<float>(value(*c.wa, 0)), static_cast<float>(value(*c.wa, 1)), static_cast<float>(value(*c.wa, 2)), fade));
+        if (on) brush->SetColor(D2D1::ColorF(static_cast<float>(value(*c.wa, 0)), static_cast<float>(value(*c.wa, 1)), static_cast<float>(value(*c.wa, 2)), fade));
+        else color(0x5a6167);
         rt->FillEllipse(D2D1::Ellipse(t, 5, 5), brush.Get());
-        color(0xe8e4dc);
+        color(on ? 0xe8e4dc : 0x8a9096);
         rt->DrawEllipse(D2D1::Ellipse(t, 5, 5), brush.Get(), 1.5f);
     }
 
@@ -1630,7 +1634,10 @@ private:
         default: {
             const ParamSpec* hovered = nullptr;
             layout();
-            if (const Card* c = cardAt(x, y)) if (const Ctl* k = ctlAt(*c, x, y)) hovered = k->spec;
+            if (const Card* c = cardAt(x, y)) {
+                if (const Ctl* k = ctlAt(*c, x, y)) hovered = k->spec;
+                else if (c->widget != Widget::None && c->wa && inside(c->wrect, x, y)) hovered = c->wa;
+            }
             if (hovered != tipSpec) { tipSpec = hovered; tipSince = now(); }
             InvalidateRect(window, nullptr, FALSE);
             break;
