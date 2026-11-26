@@ -1,0 +1,112 @@
+effect,variant,cold_ms,median_ms,p95_ms,max_ms,missed,frames
+time_shift,"Directional Smear",144.5911,27.4040,29.9934,29.9934,0,8
+time_shift,"Pull Up/Down",27.0291,27.3576,27.9484,27.9484,0,8
+time_shift,"Radial Drag",28.8646,29.2201,29.6817,29.6817,0,8
+slow_shutter,"Smooth",21.9173,22.6221,24.0702,24.0702,0,8
+slow_shutter,"Hard Trails",23.4122,24.2420,26.2544,26.2544,0,8
+echo,"Ghosts",27.8429,27.1320,28.6563,28.6563,0,8
+echo,"Glass",30.0682,32.4420,35.9375,35.9375,2,8
+echo,"Stretch",35.2977,34.2165,36.6667,36.6667,6,8
+echo,"Recursive",32.3095,32.4109,33.7230,33.7230,1,8
+prism,"Temporal RGB",23.0721,21.7645,22.2217,22.2217,0,8
+prism,"Spatial Dispersion",19.7765,22.6199,25.1988,25.1988,0,8
+prism,"Both",27.9283,28.9349,31.1996,31.1996,0,8
+stutter,"Frame Hold",4.8205,4.7447,5.0166,5.0166,0,8
+stutter,"Reverse Loop",4.8248,4.2133,4.6498,4.6498,0,8
+stutter,"Rhythmic Repeat",4.0889,4.1123,4.4894,4.4894,0,8
+pixel,"Pixelate",5.7167,5.5193,5.7853,5.7853,0,8
+pixel,"Adaptive Mosaic",10.5878,10.2727,10.6692,10.6692,0,8
+pixel,"Pixel Sort",10.0340,11.0370,12.0967,12.0967,0,8
+pixel,"ASCII",10.8641,10.8614,12.1874,12.1874,0,8
+pixel,"Dither",13.4445,11.4386,11.8788,11.8788,0,8
+pixel,"Melt",12.2457,12.2616,12.6920,12.6920,0,8
+double_exposure,"Add",18.9545,19.2286,22.2118,22.2118,0,8
+double_exposure,"Screen",20.3047,21.4859,22.4426,22.4426,0,8
+double_exposure,"Lighten",19.0291,21.7460,22.1213,22.1213,0,8
+double_exposure,"Multiply",20.1953,20.8317,22.1884,22.1884,0,8
+double_exposure,"Average",19.0562,18.1995,19.0806,19.0806,0,8
+time_displacement,"Luma",27.8512,28.1485,30.5597,30.5597,0,8
+time_displacement,"Gradient",28.1337,27.8447,28.4050,28.4050,0,8
+time_displacement,"Noise",27.4041,27.8297,28.5711,28.5711,0,8
+halation,"Default",14.1454,13.7080,14.6762,14.6762,0,8
+print_lab,"Aged Newspaper",19.9444,20.0764,20.7225,20.7225,0,8
+print_lab,"Folded Broadsheet",20.7402,21.4193,22.2502,22.2502,0,8
+print_lab,"Glossy Magazine",20.8699,21.6494,22.5126,22.5126,0,8
+print_lab,"Magazine Matte",20.4162,21.1141,21.9524,21.9524,0,8
+print_lab,"Old Magazine",22.8038,22.4532,24.8234,24.8234,0,8
+print_lab,"Book Page",20.9481,20.7075,21.1826,21.1826,0,8
+print_lab,"Photocopy",17.3741,16.7612,16.9938,16.9938,0,8
+print_lab,"Hard Xerox",16.1646,16.1660,16.5010,16.5010,0,8
+print_lab,"Riso One-Colour",20.5253,25.7483,31.1920,31.1920,0,8
+print_lab,"Spot-Colour Poster",19.3420,19.7058,21.4117,21.4117,0,8
+print_lab,"CRT Phosphor",18.5620,19.0553,19.3570,19.3570,0,8
+print_lab,"LCD Subpixels",18.9737,19.6016,20.7022,20.7022,0,8
+diffusion_lab,"White Mist",31.1671,28.9310,31.0186,31.0186,0,8
+diffusion_lab,"Black Mist",14.2814,14.4679,15.2098,15.2098,0,8
+diffusion_lab,"Glimmer",16.9701,17.2253,17.3292,17.3292,0,8
+diffusion_lab,"Fog",14.4247,14.9217,15.6221,15.6221,0,8
+diffusion_lab,"Streak",14.0264,14.0513,14.2779,14.2779,0,8
+diffusion_lab,"Pearl",14.2350,13.6757,14.8672,14.8672,0,8
+diffusion_lab,"Bloom",13.1942,13.5064,14.3769,14.3769,0,8
+diffusion_lab,"Black Soft",17.0087,17.0353,17.7633,17.7633,0,8
+diffusion_lab,"Bronze Glimmer",18.6532,18.2797,20.9926,20.9926,0,8
+diffusion_lab,"Petroleum Jelly",17.6173,15.5776,16.6254,16.6254,0,8
+camera_motion,"Snap Zoom",12.2965,11.7063,12.4019,12.4019,0,8
+camera_motion,"Push",11.6453,11.5964,11.7981,11.7981,0,8
+camera_motion,"Whip",11.2026,12.2160,12.8078,12.8078,0,8
+camera_motion,"Handheld",12.8709,12.5679,13.1282,13.1282,0,8
+camera_motion,"Dolly Zoom",12.6152,12.1972,12.4728,12.4728,0,8
+camera_motion,"Slow Pull",13.2497,12.3269,12.8183,12.8183,0,8
+camera_motion,"Snap and Back",11.5811,11.7733,12.2185,12.2185,0,8
+camera_motion,"Punch In",11.5349,12.6597,14.7787,14.7787,0,8
+camera_motion,"Pulse",14.3923,13.4154,15.0544,15.0544,0,8
+camera_motion,"Reveal",12.4551,12.5655,12.9527,12.9527,0,8
+camera_motion,"Arc In",12.1469,11.9924,13.6495,13.6495,0,8
+camera_motion,"Crane Rise",12.0185,11.8017,12.2550,12.2550,0,8
+refraction_lab,"Diopter",13.2412,12.5197,12.6474,12.6474,0,8
+refraction_lab,"Prism",12.3828,12.4560,13.5160,13.5160,0,8
+refraction_lab,"Cylindrical",13.2022,13.1049,13.2814,13.2814,0,8
+refraction_lab,"Replicator",12.6183,12.9967,13.3286,13.3286,0,8
+procedural_motion,"Circle",12.8756,12.2963,13.6195,13.6195,0,8
+procedural_motion,"Figure Eight",12.0106,12.1121,13.2136,13.2136,0,8
+procedural_motion,"Door Swing",11.9420,12.4497,12.7155,12.7155,0,8
+procedural_motion,"Drift",13.0041,12.3493,12.6289,12.6289,0,8
+procedural_motion,"Handheld",11.7343,12.2578,12.5893,12.5893,0,8
+procedural_motion,"Noise",11.8604,12.0657,12.1326,12.1326,0,8
+procedural_motion,"Spring",11.4576,11.7593,12.3156,12.3156,0,8
+motion_tear,"From Motion",17.3259,17.2038,17.5742,17.5742,0,8
+motion_tear,"Fixed Direction",10.7040,11.6858,11.9615,11.9615,0,8
+datamosh,"P-Frame Smear",19.2727,18.2390,19.6361,19.6361,0,8
+datamosh,"Block Corruption",10.1237,9.5441,10.9582,10.9582,0,8
+datamosh,"Scene Transition",8.6288,8.3622,8.6035,8.6035,0,8
+blob_tracking,"Bright",11.3818,15.2003,18.0725,18.0725,0,8
+blob_tracking,"Dark",12.2231,15.9407,17.1762,17.1762,0,8
+blob_tracking,"Motion",17.2565,23.3825,27.1105,27.1105,0,8
+multi_optic,"Default",24.4676,24.6141,25.9715,25.9715,0,8
+crt_analog,"Classic CRT",2540.8069,26.5135,32.8692,32.8692,0,8
+crt_analog,"Analog CRT",61.2442,29.1552,38.0406,38.0406,1,8
+crt_analog,"Circuit Bender",22.7362,24.5993,28.7567,28.7567,0,8
+crt_analog,"Shutter Scan",28.5430,26.4064,29.0573,29.0573,0,8
+crt_analog,"Chroma Scan",39.3349,24.1879,24.8344,24.8344,0,8
+crt_analog,"Enders",29.0422,25.4648,26.4417,26.4417,0,8
+crt_analog,"Handicam",29.7624,25.6960,29.0478,29.0478,0,8
+crt_analog,"Bad Cable",23.3999,23.7703,25.1975,25.1975,0,8
+geometric,"Geo Field",286.9490,256.4757,261.6936,261.6936,8,8
+geometric,"Constellation",403.9347,385.4128,404.9829,404.9829,8,8
+geometric,"Contours",98.7419,112.5222,170.9523,170.9523,8,8
+geometric,"Pixel Memory",922.2365,917.2937,986.1968,986.1968,8,8
+geometric,"Horizontal Echo",23.8747,25.7549,26.6089,26.6089,0,8
+geometric,"Grid System",31.4280,31.7518,32.9928,32.9928,0,8
+geometric,"Curtain",38.6181,42.9485,46.5338,46.5338,8,8
+geometric,"Portrait Window",67.6247,74.3073,82.8225,82.8225,8,8
+cutwright_art,"Mono Ink",119.8355,66.3916,79.9233,79.9233,8,8
+cutwright_art,"Motion Ink",180.9109,137.7069,155.9958,155.9958,8,8
+cutwright_art,"Cell VHS",130.3708,34.7900,39.4503,39.4503,6,8
+cutwright_art,"Star",139.9474,52.6268,54.5326,54.5326,8,8
+cutwright_art,"Particles",25.9968,24.2676,25.1057,25.1057,0,8
+cutwright_art,"Pixel Art",28.1008,20.5202,21.6881,21.6881,0,8
+cutwright_art,"Thermal",24.0816,22.2333,24.1256,24.1256,0,8
+cutwright_mosh,"Motion Trails",153.4302,152.0853,152.7973,152.7973,8,8
+cutwright_mosh,"Liquid",154.8206,145.8351,163.1607,163.1607,8,8
+cutwright_mosh,"Blocks",175.2956,177.9067,192.4220,192.4220,8,8
+cutwright_mosh,"Chroma",183.8104,165.3959,177.3445,177.3445,8,8

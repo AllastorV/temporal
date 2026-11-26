@@ -1,0 +1,7 @@
+{
+  "echo_default": {"__module": "echo"},
+  "echo_glass": {"__module": "echo", "mode": 1, "scale": 1.04},
+  "time_shift_shadow": {"__module": "time_shift", "combine": 2, "streak_length": 120, "coverage": 0.7},
+  "slow_shutter_default": {"__module": "slow_shutter"},
+  "prism_default": {"__module": "prism"}
+}

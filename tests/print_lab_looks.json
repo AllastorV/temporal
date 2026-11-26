@@ -1,0 +1,11 @@
+{
+  "aged_newspaper": {"look": 0},
+  "folded_broadsheet": {"look": 1},
+  "glossy_magazine": {"look": 2},
+  "old_magazine": {"look": 4},
+  "photocopy": {"look": 6},
+  "hard_xerox": {"look": 7},
+  "riso": {"look": 8},
+  "spot_poster": {"look": 9},
+  "broadsheet_whole": {"look": 1, "show_whole_picture": 1}
+}

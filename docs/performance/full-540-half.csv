@@ -1,0 +1,24 @@
+effect,variant,cold_ms,median_ms,p95_ms,max_ms,missed,frames
+time_shift,"Directional Smear",145.9141,14.8043,15.6010,15.6010,0,12
+slow_shutter,"Smooth",16.7853,14.9831,15.0734,15.0734,0,12
+echo,"Ghosts",17.6643,18.0134,18.2098,18.2098,0,12
+prism,"Both",9.5469,10.4400,10.8280,10.8280,0,12
+stutter,"Frame Hold",1.1311,0.8491,0.9758,0.9758,0,12
+pixel,"Pixelate",1.3221,1.2673,1.7840,1.7840,0,12
+double_exposure,"Average",7.2631,6.6865,7.2851,7.2851,0,12
+time_displacement,"Gradient",17.0501,16.0634,16.5600,16.5600,0,12
+halation,"Default",8.3740,7.4560,8.5607,8.5607,0,12
+print_lab,"Folded Broadsheet",19.4260,19.0717,20.7697,20.7697,0,12
+diffusion_lab,"White Mist",5.5305,4.9216,5.4722,5.4722,0,12
+camera_motion,"Snap Zoom",4.2193,3.8941,4.2972,4.2972,0,12
+refraction_lab,"Diopter",4.3412,3.8992,4.5679,4.5679,0,12
+procedural_motion,"Handheld",4.0539,3.7793,5.0508,5.0508,0,12
+motion_tear,"From Motion",16.8384,16.5831,17.0996,17.0996,0,12
+datamosh,"P-Frame Smear",16.2005,16.3639,17.0916,17.0916,0,12
+blob_tracking,"Bright",10.4345,19.2447,23.2368,23.2368,0,12
+multi_optic,"Default",5.0827,4.2775,4.7449,4.7449,0,12
+crt_analog,"Classic CRT",620.9933,326.0137,353.7150,353.7150,12,12
+geometric,"Geo Field",4772.2155,4358.7028,4442.2518,4442.2518,12,12
+cutwright_art,"Mono Ink",833.6877,844.1407,857.8816,857.8816,12,12
+cutwright_mosh,"Motion Trails",3901.6915,3167.5059,3920.8945,3920.8945,12,12
+lens_character,"Default",7.9763,11.2469,15.7075,15.7075,0,12

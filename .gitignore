@@ -1,0 +1,12 @@
+build/
+build-*/
+deploy/
+.remember/
+third_party/openfx/
+tests/host_out/
+tests/host_deliver/
+tests/host_smoke/
+tests/host_looks/
+tests/media/
+
+dist/
