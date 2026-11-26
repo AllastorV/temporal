@@ -36,8 +36,8 @@ print_lab,"Magazine Matte",20.4162,21.1141,21.9524,21.9524,0,8
 print_lab,"Old Magazine",22.8038,22.4532,24.8234,24.8234,0,8
 print_lab,"Book Page",20.9481,20.7075,21.1826,21.1826,0,8
 print_lab,"Photocopy",17.3741,16.7612,16.9938,16.9938,0,8
-print_lab,"Hard Xerox",16.1646,16.1660,16.5010,16.5010,0,8
-print_lab,"Riso One-Colour",20.5253,25.7483,31.1920,31.1920,0,8
+print_lab,"Hard Toner Copy",16.1646,16.1660,16.5010,16.5010,0,8
+print_lab,"Stencil Print One-Colour",20.5253,25.7483,31.1920,31.1920,0,8
 print_lab,"Spot-Colour Poster",19.3420,19.7058,21.4117,21.4117,0,8
 print_lab,"CRT Phosphor",18.5620,19.0553,19.3570,19.3570,0,8
 print_lab,"LCD Subpixels",18.9737,19.6016,20.7022,20.7022,0,8
@@ -89,7 +89,7 @@ crt_analog,"Circuit Bender",22.7362,24.5993,28.7567,28.7567,0,8
 crt_analog,"Shutter Scan",28.5430,26.4064,29.0573,29.0573,0,8
 crt_analog,"Chroma Scan",39.3349,24.1879,24.8344,24.8344,0,8
 crt_analog,"Enders",29.0422,25.4648,26.4417,26.4417,0,8
-crt_analog,"Handicam",29.7624,25.6960,29.0478,29.0478,0,8
+crt_analog,"Camcorder",29.7624,25.6960,29.0478,29.0478,0,8
 crt_analog,"Bad Cable",23.3999,23.7703,25.1975,25.1975,0,8
 geometric,"Geo Field",286.9490,256.4757,261.6936,261.6936,8,8
 geometric,"Constellation",403.9347,385.4128,404.9829,404.9829,8,8

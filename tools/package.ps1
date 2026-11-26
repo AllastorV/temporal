@@ -19,6 +19,9 @@ foreach ($b in $bundles) {
         $name = $f.FullName.Substring($parent.Length + 1).Replace("\", "/")
         [void][IO.Compression.ZipFileExtensions]::CreateEntryFromFile($archive, $f.FullName, $name, "Optimal")
     }
+    foreach ($legal in "LICENSE", "THIRD_PARTY_NOTICES.md") {
+        [void][IO.Compression.ZipFileExtensions]::CreateEntryFromFile($archive, (Join-Path $root $legal), ((Split-Path $b -Leaf) + "/" + $legal), "Optimal")
+    }
 }
 $archive.Dispose()
 Copy-Item (Join-Path $PSScriptRoot "installer\uninstall.ps1") $stage

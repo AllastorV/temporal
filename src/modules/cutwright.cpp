@@ -95,7 +95,7 @@ struct Worker {
 };
 
 const std::vector<std::string> presets[] = {
-    {"Classic CRT","Analog CRT","Circuit Bender","Shutter Scan","Chroma Scan","Enders","Handicam","Bad Cable"},
+    {"Classic CRT","Analog CRT","Circuit Bender","Shutter Scan","Chroma Scan","Enders","Camcorder","Bad Cable"},
     {"Geo Field","Constellation","Contours","Pixel Memory","Horizontal Echo","Grid System","Curtain","Portrait Window"},
     {"Mono Ink","Motion Ink","Cell VHS","Star","Particles","Pixel Art","Thermal"},
     {"Motion Trails","Liquid","Blocks","Chroma"}

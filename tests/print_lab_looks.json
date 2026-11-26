@@ -4,8 +4,8 @@
   "glossy_magazine": {"look": 2},
   "old_magazine": {"look": 4},
   "photocopy": {"look": 6},
-  "hard_xerox": {"look": 7},
-  "riso": {"look": 8},
+  "hard_toner_copy": {"look": 7},
+  "stencil_print": {"look": 8},
   "spot_poster": {"look": 9},
   "broadsheet_whole": {"look": 1, "show_whole_picture": 1}
 }

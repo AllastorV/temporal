@@ -84,11 +84,11 @@ ModuleDef makePrintLab() {
     m.cuda = CudaMode::Device;
     m.name = "Print Lab";
     m.family = "Print";
-    m.description = "Prints the image onto a simulated physical sheet (halftone, CMYK, riso, photocopy toner or spot inks, with ink mottle, rough dot edges, paper fibre, cockle, ageing and folds) and re-photographs it with a virtual camera: zoom, position, tilt, depth of field, a moving light sheen, vignette and a table under the sheet. Stylized, not calibrated to press measurements.";
+    m.description = "Prints the image onto a simulated physical sheet (halftone, CMYK, stencil print, photocopy toner or spot inks, with ink mottle, rough dot edges, paper fibre, cockle, ageing and folds) and re-photographs it with a virtual camera: zoom, position, tilt, depth of field, a moving light sheen, vignette and a table under the sheet. Stylized, not calibrated to press measurements.";
     m.temporal = false;
     m.usesEncoding = true;
     m.params = {
-        Choice("look", "Look", {"Aged Newspaper", "Folded Broadsheet", "Glossy Magazine", "Magazine Matte", "Old Magazine", "Book Page", "Photocopy", "Hard Xerox", "Riso One-Colour", "Spot-Colour Poster", "CRT Phosphor", "LCD Subpixels"}, 1,
+        Choice("look", "Look", {"Aged Newspaper", "Folded Broadsheet", "Glossy Magazine", "Magazine Matte", "Old Magazine", "Book Page", "Photocopy", "Hard Toner Copy", "Stencil Print One-Colour", "Spot-Colour Poster", "CRT Phosphor", "LCD Subpixels"}, 1,
                "Print process and paper stock: screen type, paper colour, ink behaviour, ageing, folds and gloss.", "Look"),
         Choice("preview_quality", "Preview Quality", {"Auto (Fast Preview)", "Full", "Fast"}, 0, "Auto uses Fast for host-reported preview renders. Fast forces the reduced sheet resolution when the host does not flag playback. Full always uses the detailed sheet.", "Look"),
         Dbl("texture_motion", "Texture Motion", 0.6, 0, 1, 0, 1, Unit::Normalized, "Animate the paper feed, surface grain and display refresh. Zero locks the texture.", "Look"),
@@ -98,10 +98,10 @@ ModuleDef makePrintLab() {
         Dbl("black_point", "Black Point", 0.0, 0.0, 1.0, 0.0, 1.0, Unit::Normalized, "Input level that prints as solid ink (display values).", "Look"),
         Dbl("white_point", "White Point", 1.0, 0.0, 1.0, 0.0, 1.0, Unit::Normalized, "Input level that prints as bare paper (display values).", "Look"),
         Dbl("contrast", "Contrast", 1.0, 0.1, 3.0, 0.1, 3.0, Unit::None, "Ink density contrast around the mid-tone.", "Look"),
-        Dbl("threshold", "Threshold", 0.5, 0.0, 1.0, 0.0, 1.0, Unit::Normalized, "Photocopy and Hard Xerox: darkness level where toner starts to stick.", "Look"),
+        Dbl("threshold", "Threshold", 0.5, 0.0, 1.0, 0.0, 1.0, Unit::Normalized, "Photocopy and Hard Toner Copy: darkness level where toner starts to stick.", "Look"),
         Dbl("halftone_size", "Halftone Size", 2.0, 0.5, 64.0, 0.5, 20.0, Unit::Pixels, "Base halftone cell in full-resolution source pixels; each look scales it (glossy finer, newsprint coarser).", "Look"),
         Dbl("registration", "Misregistration", 1.0, 0.0, 40.0, 0.0, 10.0, Unit::Pixels, "Plate offset in full-resolution source pixels in seeded directions.", "Look"),
-        Color("ink_a", "Ink A", 0.93, 0.26, 0.22, "Riso and Spot-Colour Poster: first spot ink (display values).", "Look"),
+        Color("ink_a", "Ink A", 0.93, 0.26, 0.22, "Stencil Print and Spot-Colour Poster: first spot ink (display values).", "Look"),
         Color("ink_b", "Ink B", 0.10, 0.36, 0.62, "Spot-Colour Poster: second spot ink (display values).", "Look"),
         Choice("camera_move", "Camera Move", {"Locked Off", "Slow Drift", "Handheld", "Push In", "Pan Across"}, 0,
                "Virtual re-photography camera motion over time; the light sheen moves across the paper with it.", "Camera"),

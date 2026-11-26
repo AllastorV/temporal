@@ -8,7 +8,7 @@
                 LensBlur = InstanceInput { SourceOp = "LensProfile", Source = "lens_blur", Name = "Background Blur", Default = 0 },
                 BlurAmount = InstanceInput { SourceOp = "LensProfile", Source = "lens_blur_amount", Name = "Blur Amount", Default = 1 },
                 Aperture = InstanceInput { SourceOp = "LensProfile", Source = "lens_stop", Name = "Aperture (T/F)", Default = 0 },
-                Zoom = InstanceInput { SourceOp = "LensProfile", Source = "lens_focal", Name = "Premista Focal Length (mm)", Default = 28 },
+                Zoom = InstanceInput { SourceOp = "LensProfile", Source = "lens_focal", Name = "Zoom Focal Length (mm)", Default = 28 },
                 Focus = InstanceInput { SourceOp = "LensProfile", Source = "focus_distance", Name = "AI Focus Distance", Default = 0.75, MinScale = 0, MaxScale = 1 },
                 FocusRange = InstanceInput { SourceOp = "LensProfile", Source = "focus_range", Name = "In-Focus Range", Default = 0.12 },
                 TiltX = InstanceInput { SourceOp = "LensProfile", Source = "focus_tilt_x", Name = "Focus Tilt X (left / right)", Default = 0, MinScale = -0.5, MaxScale = 0.5 },

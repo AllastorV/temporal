@@ -15,13 +15,13 @@ struct LensProfile {
 };
 
 constexpr LensProfile kProfiles[] = {
-    {"ARRI Signature Prime 47mm T1.8", 47, 47, 1.8f, 22, 46, 0.45f, 0,
+    {"Large-Format Cine Prime 47mm T1.8", 47, 47, 1.8f, 22, 46, 0.45f, 0,
      -0.0020f, -0.0020f, 0.00045f, 0.33f, 1.10f, 1.f, 0.85f, 0.28f, 0.012f},
-    {"Leitz SUMMILUX-C 50mm T1.4", 50, 50, 1.4f, 22, 33, 0.60f, 0,
+    {"Cine Prime 50mm T1.4", 50, 50, 1.4f, 22, 33, 0.60f, 0,
       0.0015f,  0.0015f, 0.00030f, 0.24f, 0.95f, 1.f, 0.73f, 0.20f, 0.007f},
-    {"Fujinon Premista 28-100mm T2.9", 28, 100, 2.9f, 22, 46.3f, 0.80f, 13,
+    {"Large-Format Cine Zoom 28-100mm T2.9", 28, 100, 2.9f, 22, 46.3f, 0.80f, 13,
      -0.0100f,  0.0060f, 0.00038f, 0.25f, 0.80f, 0.65f, 0.42f, 0.17f, 0.0f},
-    {"Olympus M.Zuiko 25mm F1.2 PRO", 25, 25, 1.2f, 16, 21.64f, 0.30f, 9,
+    {"Mirrorless Prime 25mm F1.2", 25, 25, 1.2f, 16, 21.64f, 0.30f, 9,
      -0.0060f, -0.0060f, 0.00060f, 0.60f, 2.60f, 0.84f, 1.45f, 0.38f, 0.0f},
 };
 
@@ -58,7 +58,7 @@ ModuleDef makeLensCharacter() {
     m.params = {
         Choice("lens_model", "Lens", std::move(models), 0, "Published lens specifications inform these adjustable look approximations."),
         Dbl("lens_stop", "Aperture (T/F)", 0, 0, 22, 0, 22, Unit::None, "Zero selects the lens's published maximum aperture. Cinema T markings approximate the geometric aperture."),
-        Dbl("lens_focal", "Zoom Focal Length (mm)", 28, 28, 100, 28, 100, Unit::None, "Sets the Premista focal length and interpolates its geometric character. Primes use their fixed focal length."),
+        Dbl("lens_focal", "Zoom Focal Length (mm)", 28, 28, 100, 28, 100, Unit::None, "Sets the zoom focal length and interpolates its geometric character. Primes use their fixed focal length."),
         Dbl("sensor_diagonal", "Active Sensor Diagonal (mm)", 0, 0, 65, 0, 50, Unit::None, "Zero uses the selected lens's supported format. A larger value samples farther out in its image circle."),
         Point("optical_center", "Optical Center", 0.5, 0.5, "Position of the lens axis in the image."),
         Dbl("lens_distortion", "Distortion Strength", 1, -3, 3, -2, 2, Unit::None, "Scales or reverses the selected profile's mild radial distortion.", "Optical Character"),
