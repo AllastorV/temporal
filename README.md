@@ -4,6 +4,8 @@
 
 <p align="center">An OpenFX effects suite for DaVinci Resolve Studio on Windows.<br>Effects that work across time, light, glass and paper, on CUDA where Resolve provides it.</p>
 
+<p align="center"><b>Tested with DaVinci Resolve Studio 21.2</b> (build 21.2.0.6)</p>
+
 <p align="center"><img src="docs/media/hero.webp" width="100%" alt="Six TEMPORAL effects running on stock footage"></p>
 
 ## What it does
@@ -23,9 +25,13 @@ Most video effects look at one frame. Many TEMPORAL effects read the frames arou
 <td><img src="docs/media/blob_tracking.webp" alt="Blob Tracking following cyclists from above"><br><b>Blob Tracking</b>: finds moving regions, gives each one a steady ID, and draws boxes, links or a matte. Here the boxes invert the image inside them.</td>
 <td><img src="docs/media/multi_optic.webp" alt="Multi-Optic faceted glass in front of a skateboarder"><br><b>Multi-Optic</b>: up to three virtual glass elements in front of the lens, with dispersion and defocus. Shown with the Facet Echo look.</td>
 </tr>
+<tr>
+<td><img src="docs/media/rain_glass.webp" alt="Rain Glass over a silhouette with a hand on a night window"><br><b>Rain Glass</b>: drops land on a pane of glass in front of the scene, merge and run down it, bending what is behind them. Shown with the Misted Window look and the focus rolled toward the city.</td>
+<td><img src="docs/media/pixel_art.webp" alt="Art Styles Pixel Art on hot air balloons at sunrise"><br><b>Art Styles</b>: the Pixel Art preset redraws the frame as dithered pixel art in a small palette. Shown at the 960 px processing size.</td>
+</tr>
 </table>
 
-Clips: Pexels, free to use. The demos are rendered in Resolve with the effects at the settings named above, at 1280 × 720.
+The demos are rendered in Resolve with the effects at the settings named above.
 
 ## All effects
 
@@ -45,9 +51,13 @@ Clips: Pexels, free to use. The demos are rendered in Resolve with the effects a
 
 The installer copies the plugin to `%LOCALAPPDATA%\Temporal\OpenFX` and adds that folder to your `OFX_PLUGIN_PATH`. To uninstall, use Windows **Settings > Apps > TEMPORAL**.
 
-## Temporal Panel
+## Temporal Panel (beta)
 
-Each effect has a **Temporal Panel** button in the Inspector. It opens a floating panel with controls grouped and coloured by family, XY pads, angle dials and colour wheels. Edits show in Resolve as you make them, and each animatable control has a keyframe diamond for the playhead position.
+<p align="center"><img src="docs/media/panel.webp" width="100%" alt="The Temporal Panel for Print Lab with the Spot-Colour Poster look"></p>
+
+Each effect has a **Temporal Panel** button in the Inspector. It opens a floating panel with controls grouped and coloured by family, XY pads, angle dials and colour wheels. Edits show in Resolve as you make them, and each animatable control has a keyframe diamond for the playhead position. A control that does not apply to the current settings is greyed out, and hovering it says why.
+
+The panel is a beta. It is still being refined, so expect changes to its layout and behaviour between releases. The effects themselves and the Inspector controls do not depend on it.
 
 On the Edit and Color pages the live refresh needs **Preferences > System > General > External scripting using: Local**.
 
