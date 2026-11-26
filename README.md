@@ -102,4 +102,4 @@ Requirements: Visual Studio 2022 C++ build tools, CMake, Ninja, Python 3, and op
 
 ## License
 
-Free to use, including for commercial productions, and everything you render with TEMPORAL is yours. TEMPORAL itself, and any fork or modified version, may not be sold and must stay under the same license with credit to the author. See [LICENSE.md](LICENSE.md).
+TEMPORAL is licensed under [CC BY-NC-SA 4.0](LICENSE) (SPDX: `CC-BY-NC-SA-4.0`). It is free to use, including for commercial productions, and everything you render with TEMPORAL is yours. TEMPORAL itself, and any fork or modified version, may not be sold, must be shared under the same license, and must credit the author. [NOTICE.md](NOTICE.md) spells out what that means in practice.
