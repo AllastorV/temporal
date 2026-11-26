@@ -52,7 +52,7 @@ add_library(tp_core STATIC
   ${TP_MODULE_SOURCES}
   ${TP_GPU_SOURCES})
 set(TP_PREVIEW_PYTHON "" CACHE FILEPATH "Optional Python with CUDA PyTorch for interactive Cutwright renders")
-target_compile_definitions(tp_core PRIVATE TP_PYTHON="${Python3_EXECUTABLE}" TP_PREVIEW_PYTHON="${TP_PREVIEW_PYTHON}")
+target_compile_definitions(tp_core PRIVATE TP_PREVIEW_PYTHON="${TP_PREVIEW_PYTHON}")
 add_dependencies(tp_core tp_cutwright_resources)
 target_include_directories(tp_core PUBLIC ${CMAKE_SOURCE_DIR}/src)
 if(TP_WITH_CUDA AND CMAKE_CUDA_COMPILER)
@@ -64,7 +64,6 @@ file(GLOB OFX_SUPPORT_SOURCES ${OFX_ROOT}/Support/Library/*.cpp)
 add_library(TEMPORAL MODULE src/ofx/adapter.cpp src/ofx/panel.cpp ${OFX_SUPPORT_SOURCES})
 target_include_directories(TEMPORAL PRIVATE ${OFX_ROOT}/include ${OFX_ROOT}/Support/include ${OFX_ROOT}/Support/Library)
 target_link_libraries(TEMPORAL PRIVATE tp_core)
-target_compile_definitions(TEMPORAL PRIVATE TP_PYTHON="${Python3_EXECUTABLE}")
 set(TP_BUNDLE ${CMAKE_BINARY_DIR}/TEMPORAL.ofx.bundle)
 set_target_properties(TEMPORAL PROPERTIES
   PREFIX ""
@@ -77,7 +76,6 @@ add_library(TEMPORAL_Optic MODULE EXCLUDE_FROM_ALL src/ofx/adapter.cpp src/ofx/p
 target_compile_definitions(TEMPORAL_Optic PRIVATE TP_OPTIC_STUDIO)
 target_include_directories(TEMPORAL_Optic PRIVATE ${OFX_ROOT}/include ${OFX_ROOT}/Support/include ${OFX_ROOT}/Support/Library)
 target_link_libraries(TEMPORAL_Optic PRIVATE tp_core)
-target_compile_definitions(TEMPORAL_Optic PRIVATE TP_PYTHON="${Python3_EXECUTABLE}")
 add_custom_command(TARGET TEMPORAL_Optic POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/resources/cutwright/resolve_refresh.py"
           "${CMAKE_BINARY_DIR}/TEMPORAL-Optic.ofx.bundle/Contents/Resources/cutwright/resolve_refresh.py")

@@ -1,6 +1,7 @@
 #include "modules.h"
 #include "../gpu/gpu.h"
 #include "cutwright_geo.h"
+#include "../core/pyexe.h"
 #include <windows.h>
 #include <filesystem>
 #include <mutex>
@@ -59,8 +60,8 @@ struct Worker {
         if (!mapping.h || !request.h || !done.h) throw std::runtime_error("Cannot allocate the effect exchange buffer");
         view = static_cast<char*>(MapViewOfFile(mapping.h,FILE_MAP_ALL_ACCESS,0,0,bytes));
         if (!view) throw std::runtime_error("Cannot map the effect exchange buffer");
-        const wchar_t* overridePath = _wgetenv(L"TEMPORAL_FX_PYTHON");
-        fs::path python = overridePath ? fs::path(overridePath) : fs::path(u8"" TP_PYTHON);
+        fs::path python = findPython();
+        if (python.empty()) throw std::runtime_error("Python was not found. Install Python 3 with NumPy and Pillow, or set TEMPORAL_FX_PYTHON.");
         if (preview) {
             const wchar_t* custom = _wgetenv(L"TEMPORAL_PREVIEW_PYTHON");
             const fs::path candidate = custom ? fs::path(custom) : fs::path(u8"" TP_PREVIEW_PYTHON);

@@ -11,7 +11,16 @@ foreach ($b in $bundles) {
 
 $stage = Join-Path ([IO.Path]::GetTempPath()) ("temporal_pkg_" + [guid]::NewGuid().ToString("N"))
 New-Item -ItemType Directory $stage | Out-Null
-Compress-Archive -Path $bundles -DestinationPath (Join-Path $stage "payload.zip")
+Add-Type -AssemblyName System.IO.Compression, System.IO.Compression.FileSystem
+$archive = [IO.Compression.ZipFile]::Open((Join-Path $stage "payload.zip"), "Create")
+foreach ($b in $bundles) {
+    $parent = Split-Path $b
+    foreach ($f in Get-ChildItem $b -Recurse -File) {
+        $name = $f.FullName.Substring($parent.Length + 1).Replace("\", "/")
+        [void][IO.Compression.ZipFileExtensions]::CreateEntryFromFile($archive, $f.FullName, $name, "Optimal")
+    }
+}
+$archive.Dispose()
 Copy-Item (Join-Path $PSScriptRoot "installer\uninstall.ps1") $stage
 Set-Content (Join-Path $stage "version.txt") "$version|$Publisher" -Encoding ascii -NoNewline
 

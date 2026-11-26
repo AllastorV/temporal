@@ -66,6 +66,8 @@ Pixel-sized controls such as blur radii look twice as large during Half playback
 
 The Cutwright effects (CRT / Analog, Geometric, Art Styles, Mosh Styles) run on CUDA and multithreaded C++. Only if the GPU path is unavailable do they fall back to a local Python process, which then needs NumPy and Pillow. Point `TEMPORAL_FX_PYTHON` at a `python.exe` that has both if needed. `TP_DISABLE_GPU=1` forces the CPU path.
 
+TEMPORAL finds Python through `TEMPORAL_FX_PYTHON`, then `PATH`. The Temporal Panel also uses it, with the standard library only, to make the Edit page redraw after a panel edit. Without Python everything else works, but on the Edit page a panel change appears after you click the viewer.
+
 ## Build
 
 Requirements: Visual Studio 2022 C++ build tools, CMake, Ninja, Python 3, and optionally the CUDA toolkit.

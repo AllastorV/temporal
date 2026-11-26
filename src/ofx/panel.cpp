@@ -1,5 +1,6 @@
 #include "panel.h"
 #include "../core/controls.h"
+#include "../core/pyexe.h"
 #ifdef _WIN32
 #include <windows.h>
 #include <windowsx.h>
@@ -1790,8 +1791,8 @@ struct HostRefresher {
         if (!GetModuleFileNameW(module, path, 32768)) return false;
         const auto script = std::filesystem::path(path).parent_path().parent_path() / L"Resources" / L"cutwright" / L"resolve_refresh.py";
         if (!std::filesystem::exists(script)) return false;
-        const wchar_t* custom = _wgetenv(L"TEMPORAL_FX_PYTHON");
-        const std::filesystem::path python = custom ? std::filesystem::path(custom) : std::filesystem::path(u8"" TP_PYTHON);
+        const std::filesystem::path python = findPython();
+        if (python.empty()) return false;
         if (!_wgetenv(L"RESOLVE_SCRIPT_LIB") && GetModuleFileNameW(nullptr, path, 32768)) {
             const auto library = std::filesystem::path(path).parent_path() / L"fusionscript.dll";
             if (std::filesystem::exists(library)) SetEnvironmentVariableW(L"RESOLVE_SCRIPT_LIB", library.c_str());
