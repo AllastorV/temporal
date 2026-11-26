@@ -64,6 +64,6 @@ Resolve Studio, Edit page, 1920 × 1080 / 30 fps timeline, a 4K H.264 30 fps sou
 | Lens Character (benchmark) | 30 | 30 |
 | Double Exposure (benchmark) | 30 | 30 |
 
-The CRT / Analog, Geometric, Cutwright Art and Cutwright Mosh rows above were measured with the Python worker. All four are native since the CUDA port (`docs/CUDA_PLAN.md`, stages 1–4); their in-memory times at Half are now 7–60 ms per frame, but Resolve playback has not been measured again.
+The CRT / Analog, Geometric, Cutwright Art and Cutwright Mosh rows above were measured with the Python worker. All four are native since the CUDA port; their in-memory times at Half are now 7–60 ms per frame, but Resolve playback has not been measured again.
 
 At 24 fps or better: 10 of 23 at Full, 17 of 23 at Half. Time Displacement and Blob Tracking compute in 16–19 ms at Half in memory but read many neighbouring frames, so long-GOP 4K decode limits them in Resolve; optimized or proxy media should help them. The Python-worker effects need a native port.
